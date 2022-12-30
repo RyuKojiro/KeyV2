@@ -115,6 +115,12 @@ module box_cherry(slop = undef) {
   children();
 }
 
+module topre(slop = undef) {
+  $stem_slop = slop != undef ? slop : $stem_slop;
+  $stem_type = "topre";
+  children();
+}
+
 module choc(slop = 0.05) {
   echo("WARN:\n\n * choc support is experimental.\n * $stem_slop is overridden.\n * it is also recommended to print them upside down if you can\n\n");
   $stem_throw = 3;

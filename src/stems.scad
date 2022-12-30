@@ -5,6 +5,7 @@ include <stems/alps.scad>
 include <stems/filled.scad>
 include <stems/cherry_stabilizer.scad>
 include <stems/choc.scad>
+include <stems/topre.scad>
 
 
 //whole stem, alps or cherry, trimmed to fit
@@ -17,6 +18,8 @@ module stem(stem_type, depth, slop, throw){
       rounded_cherry_stem(depth, slop, throw);
     } else if (stem_type == "box_cherry") {
       box_cherry_stem(depth, slop, throw);
+    } else if (stem_type == "topre") {
+      topre_stem();
     } else if (stem_type == "filled") {
       filled_stem();
     } else if (stem_type == "cherry_stabilizer") {
